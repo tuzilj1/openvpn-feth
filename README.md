@@ -10,7 +10,21 @@ server side does not change.
 - Unicast, ARP, broadcast, multicast and non-IP Ethernet frames work in both directions.
 
 This is the OpenVPN binary bundled with the SSI Remote Access macOS app by SAFECONTROL s.r.o. The
-repository is the corresponding source required by the GPL. It is not affiliated with or endorsed
+repository is the corresponding source required by the GPL.
+
+**The code change lives in the OpenVPN fork [tuzilj1/openvpn](https://github.com/tuzilj1/openvpn),
+branch [`v2.6.17-feth`](https://github.com/tuzilj1/openvpn/tree/v2.6.17-feth)** (one commit on top
+of the upstream tag `v2.6.17`, compare:
+[v2.6.17...v2.6.17-feth1](https://github.com/tuzilj1/openvpn/compare/v2.6.17...v2.6.17-feth1)).
+This repository holds the build script, the test bed and the released binaries.
+`openvpn-2.6.17-feth.patch` is generated from the fork:
+
+```bash
+git -C openvpn diff v2.6.17 v2.6.17-feth1 > openvpn-2.6.17-feth.patch
+```
+
+`build.sh` applies it to the official, signed release tarball, which unlike a git checkout already
+contains the generated `configure` script. It is not affiliated with or endorsed
 by OpenVPN Inc. "OpenVPN" is a trademark of OpenVPN Inc.
 
 ## How it works

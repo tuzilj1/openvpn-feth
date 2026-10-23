@@ -1,5 +1,5 @@
 diff --git a/src/openvpn/tun.c b/src/openvpn/tun.c
-index ec038f8..99a1eeb 100644
+index ec038f82..99a1eeb0 100644
 --- a/src/openvpn/tun.c
 +++ b/src/openvpn/tun.c
 @@ -424,6 +424,13 @@ static void solaris_error_close(struct tuntap *tt, const struct env_set *es, con
@@ -474,7 +474,7 @@ index ec038f8..99a1eeb 100644
      if (tt->is_utun)
      {
 diff --git a/src/openvpn/tun.h b/src/openvpn/tun.h
-index 91dbeef..c2d4c84 100644
+index 91dbeefe..c2d4c84a 100644
 --- a/src/openvpn/tun.h
 +++ b/src/openvpn/tun.h
 @@ -229,6 +229,10 @@ struct tuntap
